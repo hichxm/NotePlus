@@ -126,5 +126,7 @@ function noteplus_uninstall()
  */
 function noteplus_index_start()
 {
-    
+    global $templates, $mybb, $noteplus;
+
+    eval('$noteplus  = "' . $templates->get("noteplus_index") . '";');
 }
