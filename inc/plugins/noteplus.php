@@ -5,7 +5,7 @@ if (!defined("IN_MYBB"))
     die("Direct initialization of this file is not allowed.");
 }
 
-$plugins->add_hook("index_start", "noteplus_index");
+$plugins->add_hook("index_start", "noteplus_index_start");
 
 /**
  * @function Return plugin information
