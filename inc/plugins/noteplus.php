@@ -69,3 +69,17 @@ function noteplus_is_installed()
 
     return isset($mybb->settings['noteplus_enabled']);
 }
+
+/**
+ * @function Plugin uninstall
+ * @return mixed
+ */
+function noteplus_uninstall()
+{
+    global $db;
+
+    $db->delete_query("settinggroups", "name=\"noteplus_sg\"");
+    $db->delete_query("settings", "name LIKE \"noteplus_%\"");
+
+    rebuild_settings();
+}
