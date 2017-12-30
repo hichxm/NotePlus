@@ -58,3 +58,14 @@ function noteplus_install()
 
     rebuild_settings();
 }
+
+/**
+ * @function Plugin is installed
+ * @return bool
+ */
+function noteplus_is_installed()
+{
+    global $mybb;
+
+    return isset($mybb->settings['noteplus_enabled']);
+}
