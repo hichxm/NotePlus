@@ -63,6 +63,33 @@ function noteplus_install()
         $db->insert_query("settings", $setting);
     }
 
+    $templates = [
+        "noteplus_index" => [
+            "template"  => $db->escape_string('
+<br />
+    <table border="0" cellspacing="{$theme[\'borderwidth\']}" cellpadding="{$theme[\'tablespace\']}" class="tborder">
+		<tbody>
+			<tr>
+				<td class="trow1">
+					{$mybb->settings[\'noteplus_message\']}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<br />
+'),
+            "sid"       => "-1",
+            "version"   => ""
+        ]
+    ];
+
+    foreach ($templates as $name => $template) {
+        $template["title"]      = $name;
+        $template["dateline"]   = time();
+
+        $db->insert_query("templates", $template);
+    }
+
     rebuild_settings();
 }
 
