@@ -49,7 +49,7 @@ function noteplus_install()
         ],
         "noteplus_message" => [
             "title"         => "Message",
-            "description"   => "The message to display on the homepage.",
+            "description"   => "The message to display on the homepage. (plaintext, html)",
             "optionscode"   => "textarea",
             "value"         => "My message :)",
             "disporder"     => 2
