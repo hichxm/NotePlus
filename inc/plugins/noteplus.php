@@ -115,6 +115,8 @@ function noteplus_uninstall()
     $db->delete_query("settinggroups", "name=\"noteplus_sg\"");
     $db->delete_query("settings", "name LIKE \"noteplus_%\"");
 
+    $db->delete_query("templates", "title LIKE \"noteplus_%\"");
+
     rebuild_settings();
 }
 
