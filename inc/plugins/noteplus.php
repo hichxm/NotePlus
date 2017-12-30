@@ -5,6 +5,8 @@ if (!defined("IN_MYBB"))
     die("Direct initialization of this file is not allowed.");
 }
 
+$plugins->add_hook("index_start", "noteplus_index");
+
 /**
  * @function Return plugin information
  * @return array
@@ -87,4 +89,13 @@ function noteplus_uninstall()
     $db->delete_query("settings", "name LIKE \"noteplus_%\"");
 
     rebuild_settings();
+}
+
+/**
+ * @function Plugin start
+ * @return templates
+ */
+function noteplus_index_start()
+{
+    
 }
