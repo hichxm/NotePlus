@@ -17,7 +17,7 @@ function noteplus_info()
         "name"          => "NotePlus",
         "description"   => "Display note for all user.",
         "author"        => "volca780",
-        "authotsite"    => "https://github.com/volca780",
+        "authorsite"    => "https://github.com/volca780",
         "version"       => "1.0",
         "compatibility" => "18*"
     ];
